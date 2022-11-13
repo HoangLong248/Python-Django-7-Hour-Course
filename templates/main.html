@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
     <head>
         <title>StudyBud</title>
+        <link rel="stylesheet" type="text/css" main="screen" href="{% static 'styles/main.css' %}">
     </head>
     <body>
         {% include 'navbar.html' %}
@@ -15,7 +17,7 @@
                 {% endfor %}
             </ul>
         {% endif %}
-
+        <!-- <img src="{% static 'images/models.jpg' %}"> -->
         {% block content %}
         {% endblock content %}
     </body>
