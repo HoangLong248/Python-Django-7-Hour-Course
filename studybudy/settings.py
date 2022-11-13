@@ -126,12 +126,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
+MEDIA_ROOT = BASE_DIR / 'static/images'
 # STATIC_ROOT = 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -141,3 +143,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ALLOWED_HOSTS = ['192.168.1.27','127.0.0.1']
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+AUTH_USER_MODEL = 'base.USER'
